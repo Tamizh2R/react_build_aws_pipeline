@@ -5,6 +5,8 @@ phases:
     runtime-versions:
       nodejs: 14
     commands:
+      - rm -rf node_modules         # 🧹 Clean before install
+      - rm -f package-lock.json     # optional: clean lock file if issues continue
       - npm install
   build:
     commands:
